@@ -45,6 +45,12 @@ class CarService {
       doorsQty: car.doorsQty,
       seatsQty: car.seatsQty };
   }
+  public async update(id: string, newCar: ICar) {
+    const carODM = new CarODM();
+    const car = await carODM.update(id, newCar);
+    if (!car) return null;
+    return { ...newCar, id };
+  }
 }
 
 export default CarService;
