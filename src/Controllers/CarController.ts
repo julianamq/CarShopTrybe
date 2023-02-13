@@ -16,7 +16,7 @@ class CarController {
   }
 
   public async create() {
-    const car: ICar = {
+    const carId: ICar = {
       model: this.req.body.model,
       year: this.req.body.year,
       color: this.req.body.color,
@@ -27,7 +27,7 @@ class CarController {
     };
 
     try {
-      const newCar = await this.service.create(car);
+      const newCar = await this.service.create(carId);
       return this.res.status(201).json(newCar);
     } catch (error) {
       this.next(error);
