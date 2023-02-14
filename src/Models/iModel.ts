@@ -4,7 +4,7 @@ import {
   model,
   models,
 } from 'mongoose';
-import IMotorcycle from '../Interfaces/IMoto';
+import IMotorcycle from '../Interfaces/IMotorcycle';
   
 class MotorcycleODM {
   private schema: Schema;

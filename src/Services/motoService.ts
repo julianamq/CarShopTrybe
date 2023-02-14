@@ -1,5 +1,5 @@
-import Motorcycle from '../Domains/IMoto';
-import IMoto from '../Interfaces/IMoto';
+import Motorcycle from '../Domains/Motorcycle';
+import IMoto from '../Interfaces/IMotorcycle';
 import MotorcycleODM from '../Models/iModel';
 
 class MotorcycleService {

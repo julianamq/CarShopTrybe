@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from 'express';
 import { ObjectId } from 'mongodb';
-import IMotorcycle from '../Interfaces/IMoto';
+import IMotorcycle from '../Interfaces/IMotorcycle';
 import MotorcycleService from '../Services/motoService';
 
 class MotorcycleController {
