@@ -2,7 +2,7 @@ import { expect } from 'chai';
 import sinon from 'sinon';
 import { Model } from 'mongoose';
 import IMotorcycle from '../../../src/Interfaces/IMotorcycle';
-import Motorcycle from '../../../src/Domains/Motorcycle';
+// import Motorcycle from '../../../src/Domains/Motorcycle';
 import MotorcycleService from '../../../src/Services/motoService';
 import { motorcycleCreate } from '../../mocks/motoMock';
 

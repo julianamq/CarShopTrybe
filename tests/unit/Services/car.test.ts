@@ -2,7 +2,7 @@ import { expect } from 'chai';
 import sinon from 'sinon';
 import { Model } from 'mongoose';
 import CarService from '../../../src/Services/CarService';
-import { createCar, carCreateById, statusFalse } from '../../mocks/mockCreate';
+import { createCar, carCreateById } from '../../mocks/mockCreate';
 
 const INVALID_MONGO_ID = 'Invalid mongo id';
 const CAR_NOT_FOUND = 'Car not found';
