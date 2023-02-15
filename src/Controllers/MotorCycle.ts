@@ -63,3 +63,5 @@ class MotorcycleController {
 }
 
 export default MotorcycleController;
+// O código acima é um controlador (controller) para lidar com requisições HTTP 
+// relacionadas a motocicletas em uma aplicação Node.js utilizando o framework Express.
