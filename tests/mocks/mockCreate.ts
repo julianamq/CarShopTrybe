@@ -19,8 +19,18 @@ const carCreateById: ICar = {
   doorsQty: 2,
   seatsQty: 5,
 };
-
+const statusFalse = {
+  id: '63ebe15955fc2bf9c485eaaf',
+  model: 'Pagani',
+  year: 2008,
+  color: 'Prata',
+  status: false,
+  buyValue: 350,
+  doorsQty: 2,
+  seatsQty: 5,
+};
 export {
   createCar,
   carCreateById,
+  statusFalse,
 };

@@ -21,7 +21,7 @@ class MotorcycleService {
   public async getAll() {
     const motoODM = new MotorcycleODM();
     const motos = await motoODM.getAll();
-    return motos.map((moto) => ({ id: moto._id,
+    return motos.map((moto) => new Motorcycle({ id: moto.id,
       model: moto.model,
       year: moto.year,
       color: moto.color,
@@ -35,22 +35,22 @@ class MotorcycleService {
     const motoODM = new MotorcycleODM();
     const moto = await motoODM.getById(id);
     if (!moto) return null;
-    return {
-      id: moto._id,
+    return new Motorcycle({
+      id: moto.id,
       model: moto.model,
       year: moto.year,
       color: moto.color,
       status: moto.status,
       buyValue: moto.buyValue,
       engineCapacity: moto.engineCapacity,
-      category: moto.category };
+      category: moto.category });
   }
 
   public async update(id: string, newMoto: IMoto) {
     const motoODM = new MotorcycleODM();
     const moto = await motoODM.update(id, newMoto);
     if (!moto) return null;
-    return { ...newMoto, id };
+    return new Motorcycle({ ...newMoto, id });
   }
 }
 

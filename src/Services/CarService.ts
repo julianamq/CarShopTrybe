@@ -21,7 +21,7 @@ class CarService {
   public async getAll() {
     const carODM = new CarODM();
     const cars = await carODM.getAll();
-    return cars.map((car) => ({ id: car._id,
+    return cars.map((car) => new Car({ id: car.id,
       model: car.model,
       year: car.year,
       color: car.color,
@@ -35,21 +35,21 @@ class CarService {
     const carODM = new CarODM();
     const car = await carODM.getById(id);
     if (!car) return null;
-    return {
-      id: car._id,
+    return new Car({
+      id: car.id,
       model: car.model,
       year: car.year,
       color: car.color,
       status: car.status,
       buyValue: car.buyValue,
       doorsQty: car.doorsQty,
-      seatsQty: car.seatsQty };
+      seatsQty: car.seatsQty });
   }
   public async update(id: string, newCar: ICar) {
     const carODM = new CarODM();
     const car = await carODM.update(id, newCar);
     if (!car) return null;
-    return { ...newCar, id };
+    return new Car({ ...newCar, id });
   }
 }
 
