@@ -1,13 +1,19 @@
-# :construction: README customizado em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto no qual você pode customizar e reutilizar todas as vezes que for executar o trybe-publisher.
+Concessionária de Veículos API
+Este projeto foi desenvolvido com o objetivo de criar uma API para gerenciar uma concessionária de veículos. A API foi construída utilizando os princípios da Programação Orientada a Objetos (POO) e a linguagem de programação JavaScript, juntamente com o framework do Mongoose para trabalhar com o banco de dados MongoDB.
 
-Para deixá-lo com a sua cara, basta alterar o seguinte arquivo da sua máquina: ~/.student-repo-publisher/custom/_NEW_README.md
+Endpoints da API
+A seguir, apresentamos a lista de endpoints disponíveis na API:
 
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+/cars
+GET /cars: retorna uma lista de todos os carros cadastrados na concessionária.
+POST /cars: cadastra um novo carro na concessionária.
+/cars/:id
+PUT /cars/:id: atualiza as informações de um carro cadastrado na concessionária.
+/motorcycles
+GET /motorcycles: retorna uma lista de todas as motos cadastradas na concessionária.
+POST /motorcycles: cadastra uma nova moto na concessionária.
+/motorcycles/:id
+PUT /motorcycles/:id: atualiza as informações de uma moto cadastrada na concessionária.
+
+Testes
+Foram implementados testes para as camadas de Service, utilizando as bibliotecas chai, sinon e mongoose. A cobertura de testes para a camada de Service deve ser de no mínimo 60%.
